@@ -14,7 +14,9 @@ jobs:
         with:
           node-version: '18.x'
       - run: npm install 
-      - run: cypress@10.9.0 @percy/cli --save-dev
+      - run: npm install cypress@10.9.0 --save-dev
+      - run: npx cypress --version
+      - run: npm install @percy/cli
       - run: npx percy exec -- cypress run
         env:
           PERCY_TOKEN: $
