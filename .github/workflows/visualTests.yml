@@ -1,0 +1,11 @@
+name: pr-test-runner
+
+on: 
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    if: ${{github.event.label.name == 'trigger-pr-builder' || github.event_name == 'workflow_dispatch'}}
+    runs-on: ubuntu-latest
+    
