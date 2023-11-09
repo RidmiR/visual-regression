@@ -1,8 +1,8 @@
 /// <reference types="cypress" />
 import '@percy/cypress'
 
-import header from "../../pageObjects/header"
-import subcategory from "../../pageObjects/subcategoryPage"
+import header from "../../../pageObjects/header"
+import subcategory from "../../../pageObjects/subcategoryPage"
 
 describe('Visual tests for Subcategory-laundry page', () => {
 

@@ -1,5 +1,5 @@
 import mieleComponent from "../fixtures/miele-ui-component-data.json";
-import mieleuiObject from "../../cypress/e2e/pageObjects/mieleUi";
+import mieleuiObject from "../pageObjects/mieleUi";
 
 /**
  * This method is used to visit the Miele UI URL
