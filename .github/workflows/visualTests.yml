@@ -19,4 +19,4 @@ jobs:
       - run: npm install @percy/cli
       - run: npx percy exec -- cypress run
         env:
-          PERCY_TOKEN: $
+          PERCY_TOKEN: ${{ secrets.percy_token }}
