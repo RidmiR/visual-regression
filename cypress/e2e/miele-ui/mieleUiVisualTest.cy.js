@@ -25,13 +25,13 @@ describe("Visual regression test for Miele UI components", () => {
 
   it("Verify visual test for component - " + badge, () => {
     cy.visitMieleUi(badge);
-    // cy.percySnapshot(badge);
+    cy.percySnapshot(badge);
   });
 
-  // it("Verify visual test for component - " + button, () => {
-  //   cy.visitMieleUi(button);
-  //   cy.percySnapshot(button);
-  // });
+  it("Verify visual test for component - " + button, () => {
+    cy.visitMieleUi(button);
+    cy.percySnapshot(button);
+  });
 
   // it("Verify visual test for component - " + buttonGroup, () => {
   //   cy.visitMieleUi(buttonGroup);
