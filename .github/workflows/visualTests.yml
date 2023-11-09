@@ -5,12 +5,18 @@ on:
     branches:
       - main
 jobs:
-  build:
+  e2e:
     runs-on: ubuntu-latest
     steps:
-      - run: npm install
-      - run: npm install cypress@10.9.0 --save-dev
-      - run: npm install --save-dev @percy/cli
-      - run: npx percy exec -- cypress run
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '12.x'
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+         build: npm install cypress@10.9.0 @percy/cli --save-dev
+         command-prefix: npx percy exec -- cypress run
         env:
           PERCY_TOKEN: $
