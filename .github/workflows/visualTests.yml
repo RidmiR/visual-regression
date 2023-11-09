@@ -13,7 +13,8 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '18.x'
-          run: npm install cypress@10.9.0 @percy/cli --save-dev
-          command-prefix: 'npx percy exec -- cypress run'
+      - run: npm install 
+      - run: cypress@10.9.0 @percy/cli --save-dev
+      - run: npx percy exec -- cypress run
         env:
           PERCY_TOKEN: $
