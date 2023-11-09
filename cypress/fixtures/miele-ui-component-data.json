@@ -1,0 +1,25 @@
+{
+  "baseUrl": "https://digital-commerce.miele.com/miele-ui/stories/",
+  "component": [
+    {
+      "badge": "miele-badge",
+      "button": "miele-button",
+      "buttonGroup": "miele-button-group",
+      "checkbox": "miele-checkbox",
+      "checkboxGroup": "miele-checkbox-group",
+      "chip": "miele-chip",
+      "horizontalRule": "miele-horizontal-rule",
+      "icon": "miele-icon",
+      "image": "miele-image",
+      "link": "miele-link",
+      "list": "miele-list",
+      "radioButton": "miele-radio-button",
+      "radioButtonGroup": "miele-radio-button-group",
+      "textArea": "miele-text-area",
+      "textInput": "miele-text-input",
+      "themeProvider": "miele-theme-provider",
+      "typography": "miele-typography",
+      "blockExample": "miele-block-example"
+    }
+  ]
+}
