@@ -1,11 +1,16 @@
 name: pr-test-runner
 
-on: 
-  pull_request:
-    branches: [ main ]
-
+on:
+  push:
+    branches:
+      - main
 jobs:
   build:
-    if: ${{github.event.label.name == 'trigger-pr-builder' || github.event_name == 'workflow_dispatch'}}
     runs-on: ubuntu-latest
-    
+    steps:
+      - run: npm install
+      - run: npm install cypress@10.9.0 --save-dev
+      - run: npm install --save-dev @percy/cli
+      - run: npx percy exec -- cypress run
+        env:
+          PERCY_TOKEN: $
